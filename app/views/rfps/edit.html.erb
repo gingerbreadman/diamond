@@ -1,0 +1,67 @@
+<div class="page-header">
+  <h1>Editing Rfp #<%= @rfp.id %></h1>
+</div>
+
+<%= form_tag(rfp_url(@rfp), method: 'patch', class: 'form-horizontal') do %>
+  <div class="form-group">
+    <%= label_tag :max_price, nil, class: 'col-md-2 control-label' %>
+    <div class="col-md-6">
+      <%= text_field_tag :max_price, @rfp.max_price, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :shape, nil, class: 'col-md-2 control-label' %>
+    <div class="col-md-6">
+      <%= text_field_tag :shape, @rfp.shape, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :cut, nil, class: 'col-md-2 control-label' %>
+    <div class="col-md-6">
+      <%= text_field_tag :cut, @rfp.cut, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :color, nil, class: 'col-md-2 control-label' %>
+    <div class="col-md-6">
+      <%= text_field_tag :color, @rfp.color, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :clarity, nil, class: 'col-md-2 control-label' %>
+    <div class="col-md-6">
+      <%= text_field_tag :clarity, @rfp.clarity, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :carat, nil, class: 'col-md-2 control-label' %>
+    <div class="col-md-6">
+      <%= text_field_tag :carat, @rfp.carat, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :comment, nil, class: 'col-md-2 control-label' %>
+    <div class="col-md-6">
+      <%= text_area_tag :comment, @rfp.comment, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :user_id, nil, class: 'col-md-2 control-label' %>
+    <div class="col-md-6">
+      <%= number_field_tag :user_id, @rfp.user_id, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-md-offset-2 col-md-6">
+      <%= submit_tag "Update Rfp", class: 'btn btn-primary' %>
+    </div>
+  </div>
+<% end %>

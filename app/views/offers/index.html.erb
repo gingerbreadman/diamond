@@ -1,0 +1,46 @@
+<div class="page-header">
+  <h1>Offers</h1>
+</div>
+
+<p><%= link_to 'Add a New Offer', new_offer_url, class: 'btn btn-primary' %></p>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Price</th>
+      <th>Shape</th>
+      <th>Cut</th>
+      <th>Color</th>
+      <th>Clarity</th>
+      <th>Carat</th>
+      <th>Comment</th>
+      <th>User</th>
+      <th>Merchant</th>
+      <th>Rfp</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @offers.each do |offer| %>
+      <tr>
+        <td><%= offer.price %></td>
+        <td><%= offer.shape %></td>
+        <td><%= offer.cut %></td>
+        <td><%= offer.color %></td>
+        <td><%= offer.clarity %></td>
+        <td><%= offer.carat %></td>
+        <td><%= offer.comment %></td>
+        <td><%= offer.user_id %></td>
+        <td><%= offer.merchant_id %></td>
+        <td><%= offer.rfp_id %></td>
+        <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, offer_url(offer), class: 'btn btn-primary' %></td>
+        <td><%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_offer_url(offer), class: 'btn btn-warning' %></td>
+        <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, offer_url(offer), method: 'delete', data: { confirm: "Do you really want to delete this offer?" }, class: 'btn btn-danger' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
