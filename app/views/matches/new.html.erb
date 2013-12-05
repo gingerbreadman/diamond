@@ -13,7 +13,7 @@
   <div class="form-group">
     <%= label_tag :rfp_id, nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
-    <%= select_tag :rfp_id, options_from_collection_for_select(Rfp.all, :id, :cut), class: 'form-control' %>
+    <%= select_tag :rfp_id, options_from_collection_for_select(Rfp.all, :id, :full_diamond_trait), class: 'form-control' %>
     </div>
   </div>
 

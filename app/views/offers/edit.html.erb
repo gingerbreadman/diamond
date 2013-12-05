@@ -55,21 +55,21 @@
   <div class="form-group">
     <%= label_tag :user_id, nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
-      <%= number_field_tag :user_id, @offer.user_id, class: 'form-control' %>
+      <%= select_tag :user_id, options_from_collection_for_select(User.all, :id, :full_name), class: 'form-control' %>
     </div>
   </div>
 
   <div class="form-group">
     <%= label_tag :merchant_id, nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
-      <%= number_field_tag :merchant_id, @offer.merchant_id, class: 'form-control' %>
+      <%= select_tag :merchant_id, options_from_collection_for_select(Merchant.all, :id, :business_name), class: 'form-control' %>
     </div>
   </div>
 
   <div class="form-group">
     <%= label_tag :rfp_id, nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
-      <%= number_field_tag :rfp_id, @offer.rfp_id, class: 'form-control' %>
+      <%= select_tag :rfp_id, options_from_collection_for_select(Rfp.all, :id, :full_diamond_trait), class: 'form-control' %>
     </div>
   </div>
 

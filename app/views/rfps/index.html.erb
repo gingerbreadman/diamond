@@ -31,7 +31,7 @@
         <td><%= rfp.clarity %></td>
         <td><%= rfp.carat %></td>
         <td><%= rfp.comment %></td>
-        <td><%= rfp.user_id %></td>
+        <td><%= rfp.user.full_name %></td>
         <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, rfp_url(rfp), class: 'btn btn-primary' %></td>
         <td><%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_rfp_url(rfp), class: 'btn btn-warning' %></td>
         <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, rfp_url(rfp), method: 'delete', data: { confirm: "Do you really want to delete this rfp?" }, class: 'btn btn-danger' %></td>

@@ -9,6 +9,7 @@ class OffersController < ApplicationController
   end
 
   def new
+      @offer = Offer.new
   end
 
   def create

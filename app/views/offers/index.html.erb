@@ -33,9 +33,9 @@
         <td><%= offer.clarity %></td>
         <td><%= offer.carat %></td>
         <td><%= offer.comment %></td>
-        <td><%= offer.user_id %></td>
-        <td><%= offer.merchant_id %></td>
-        <td><%= offer.rfp_id %></td>
+        <td><%= offer.user.full_name %></td>
+        <td><%= offer.merchant.business_name %></td>
+        <td><%= offer.rfp.full_diamond_trait %></td>
         <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, offer_url(offer), class: 'btn btn-primary' %></td>
         <td><%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_offer_url(offer), class: 'btn btn-warning' %></td>
         <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, offer_url(offer), method: 'delete', data: { confirm: "Do you really want to delete this offer?" }, class: 'btn btn-danger' %></td>

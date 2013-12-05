@@ -25,12 +25,12 @@
   <dd><%= @offer.comment %></dd>
 
   <dt>User</dt>
-  <dd><%= @offer.user_id %></dd>
+  <dd><%= @offer.user.full_name %></dd>
 
   <dt>Merchant</dt>
-  <dd><%= @offer.merchant_id %></dd>
+  <dd><%= @offer.merchant.business_name %></dd>
 
   <dt>Rfp</dt>
-  <dd><%= @offer.rfp_id %></dd>
+  <dd><%= @offer.rfp.full_diamond_trait %></dd>
 
 </dl>

@@ -7,5 +7,19 @@ class Rfp < ActiveRecord::Base
     return "#{max_price}  #{carat}  #{shape} #{color}  #{cut}  #{clarity}"
   end
 
+  def user
+    return User.find(user_id)
+  end
+
+  def merchant
+    return Merchant.find(merchant_id)
+  end
+
+  def rfp
+    return Rfp.find(rfp_id)
+  end
+
+  validates :max_price, numericality: { greater_than: 0 }
+  validates :carat, numericality: { greater_than: 0 }
 
 end

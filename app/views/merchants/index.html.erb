@@ -14,7 +14,7 @@
       <th>Zip code</th>
       <th>Email</th>
       <th>Phone number</th>
-      <th>Image url</th>
+      <th>Image</th>
       <th></th>
       <th></th>
       <th></th>
@@ -31,7 +31,7 @@
         <td><%= merchant.zip_code %></td>
         <td><%= merchant.email %></td>
         <td><%= merchant.phone_number %></td>
-        <td><%= merchant.image_url %></td>
+        <td><%= image_tag merchant.image_url, width: 200 %></td>
         <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, merchant_url(merchant), class: 'btn btn-primary' %></td>
         <td><%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_merchant_url(merchant), class: 'btn btn-warning' %></td>
         <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, merchant_url(merchant), method: 'delete', data: { confirm: "Do you really want to delete this merchant?" }, class: 'btn btn-danger' %></td>

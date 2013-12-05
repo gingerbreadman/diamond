@@ -9,6 +9,7 @@ class RfpsController < ApplicationController
   end
 
   def new
+    @rfp = Rfp.new
   end
 
   def create

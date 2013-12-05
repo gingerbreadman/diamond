@@ -18,8 +18,8 @@
   <tbody>
     <% @matches.each do |match| %>
       <tr>
-        <td><%= match.merchant_id %></td>
-        <td><%= match.rfp_id %></td>
+        <td><%= match.merchant.business_name %></td>
+        <td><%= match.rfp.full_diamond_trait %></td>
         <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, match_url(match), class: 'btn btn-primary' %></td>
         <td><%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_match_url(match), class: 'btn btn-warning' %></td>
         <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, match_url(match), method: 'delete', data: { confirm: "Do you really want to delete this match?" }, class: 'btn btn-danger' %></td>
