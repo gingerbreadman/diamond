@@ -2,6 +2,15 @@
   <h1>Editing Offer #<%= @offer.id %></h1>
 </div>
 
+<% if @offer.errors.any? %>
+    <% @offer.errors.full_messages.each do |message| %>
+        <div class="alert alert-dismissable alert-danger">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <%= message %>
+      </div>
+    <% end %>
+<% end  %>
+
 <%= form_tag(offer_url(@offer), method: 'patch', class: 'form-horizontal') do %>
   <div class="form-group">
     <%= label_tag :price, nil, class: 'col-md-2 control-label' %>
