@@ -21,5 +21,5 @@ class Rfp < ActiveRecord::Base
 
   validates :max_price, numericality: { greater_than: 0 }
   validates :carat, numericality: { greater_than: 0 }
-
+  validates :user_id, :presence => true
 end
