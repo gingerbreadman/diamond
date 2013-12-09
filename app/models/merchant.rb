@@ -1,5 +1,5 @@
 class Merchant < ActiveRecord::Base
-  has_many :offers
+  has_many :offers, :dependent => :destroy
 
 
 validates :business_name, :presence => true

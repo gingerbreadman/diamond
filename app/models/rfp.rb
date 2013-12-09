@@ -1,6 +1,6 @@
 class Rfp < ActiveRecord::Base
-  has_many :matches
-  has_many :offers
+  has_many :matches, :dependent => :destroy
+  has_many :offers, :dependent => :destroy
   belongs_to :user
 
   def full_diamond_trait

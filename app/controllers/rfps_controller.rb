@@ -1,7 +1,5 @@
 class RfpsController < ApplicationController
 
-  before_action(:authenticate_user!)
-
   def index
     @rfps = current_user.rfps
   end
