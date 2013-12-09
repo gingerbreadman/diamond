@@ -1,4 +1,5 @@
 Diamond::Application.routes.draw do
+  devise_for :users
   root "rfps#new"
 
   # Routes for the Match resource:
