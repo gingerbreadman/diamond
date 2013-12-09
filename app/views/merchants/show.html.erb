@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1>Merchant #<%= @merchant.id %></h1>
+  <h1><%= @merchant.business_name %></h1>
 </div>
 
 <dl class="dl-horizontal">
@@ -28,3 +28,17 @@
   <dd><%= image_tag @merchant.image_url, width: 200 %></dd>
 
 </dl>
+
+<div>
+<dt>Requests Matched to You</dt>
+<% @merchant.matches.each do |match| %>
+  <li><%= match.rfp.full_diamond_trait %></li>
+<% end %>
+</div>
+
+<div>
+<dt>Offers You've Made</dt>
+<% @merchant.offers.each do |offer| %>
+  <li><%= offer.full_diamond_trait %></li>
+<% end %>
+</div>
