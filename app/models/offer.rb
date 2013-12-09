@@ -3,6 +3,9 @@ class Offer < ActiveRecord::Base
   belongs_to :rfp
   belongs_to :user
 
+  def full_diamond_trait
+    return "#{price}  #{carat}  #{shape} #{color}  #{cut}  #{clarity}"
+  end
 
 def user
   return User.find(user_id)

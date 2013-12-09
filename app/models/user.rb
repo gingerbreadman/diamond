@@ -3,8 +3,9 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  has_many :rfps
+  # has_many :rfps
   has_many :offers
+  has_many :rfps, :through => :offers
 
   def full_name
     return "#{first_name} #{last_name}"

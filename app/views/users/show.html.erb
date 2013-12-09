@@ -19,3 +19,14 @@
   <dd><%= @user.phone_number %></dd>
 
 </dl>
+
+<dt>Your Requests</dt>
+<% @user.rfps.each do |rfp| %>
+  <li><%= rfp.full_diamond_trait %></li>
+<% end %>
+
+
+<dt>Your Offers</dt>
+<% @user.offers.each do |offer| %>
+  <li><%= offer.full_diamond_trait %></li>
+<% end %>
