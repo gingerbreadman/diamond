@@ -1,4 +1,13 @@
 class UsersController < ApplicationController
+  before_action :user_must_be_current_user, :except => [:index, :new, :create]
+
+  def user_must_be_current_user
+    @user = User.find_by(id: params[:id])
+    unless @user == current_user
+      redirect_to root_url, :notice => "Not authorized."
+    end
+  end
+
 
   def index
     #@users = current_user.users
