@@ -1,7 +1,7 @@
 class RfpsController < ApplicationController
 
   def index
-    @rfps = Rfp.all
+    @rfps =current_user.rfps
   end
 
   def show
@@ -21,7 +21,7 @@ class RfpsController < ApplicationController
     @rfp.clarity = params[:clarity]
     @rfp.carat = params[:carat]
     @rfp.comment = params[:comment]
-    @rfp.user_id = params[:user_id]
+    @rfp.user_id = current_user.id
 
     if @rfp.save
       redirect_to rfps_url, notice: "Rfp created successfully."
@@ -43,7 +43,7 @@ class RfpsController < ApplicationController
     @rfp.clarity = params[:clarity]
     @rfp.carat = params[:carat]
     @rfp.comment = params[:comment]
-    @rfp.user_id = params[:user_id]
+    @rfp.user_id = current_user.id
 
     if @rfp.save
       redirect_to rfps_url, notice: "Rfp updated successfully."

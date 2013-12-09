@@ -21,7 +21,7 @@ class OffersController < ApplicationController
     @offer.clarity = params[:clarity]
     @offer.carat = params[:carat]
     @offer.comment = params[:comment]
-    @offer.user_id = params[:user_id]
+    @offer.user_id = current_user.id
     @offer.merchant_id = params[:merchant_id]
     @offer.rfp_id = params[:rfp_id]
 
@@ -45,7 +45,7 @@ class OffersController < ApplicationController
     @offer.clarity = params[:clarity]
     @offer.carat = params[:carat]
     @offer.comment = params[:comment]
-    @offer.user_id = params[:user_id]
+    @offer.user_id = current_user.id
     @offer.merchant_id = params[:merchant_id]
     @offer.rfp_id = params[:rfp_id]
 
