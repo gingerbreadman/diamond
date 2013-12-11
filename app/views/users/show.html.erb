@@ -20,13 +20,29 @@
 
 </dl>
 
-<dt>Your Requests</dt>
+<h3>Your Request</h3>
 <% @user.rfps.each do |rfp| %>
-  <li><%= rfp.full_diamond_trait %></li>
+  <h5>Request #0000<%= rfp.id %></h5>
+  <dt>Max price: <%= rfp.max_price %></dt>
+  <dt>Shape: <%= rfp.shape %></dt>
+  <dt>Cut: <%= rfp.cut %></dt>
+  <dt>Color: <%= rfp.color %></dt>
+  <dt>Clarity: <%= rfp.clarity %></dt>
+  <dt>Carat: <%= rfp.carat %>
+  <dt>Comment</dt>
+  <dd><%= rfp.comment %></dd>
 <% end %>
 
 
-<dt>Your Offers</dt>
+<h3>Offers</h3>
 <% @user.offers.each do |offer| %>
-  <li><%= offer.full_diamond_trait %></li>
+  <h5>Offer #0000<%= offer.id %></h5>
+  <dt>Price: <%= offer.price %></dt>
+  <dt>Shape: <%= offer.shape %></dt>
+  <dt>Cut: <%= offer.cut %></dt>
+  <dt>Color: <%= offer.color %></dt>
+  <dt>Clarity: <%= offer.clarity %></dt>
+  <dt>Carat: <%= offer.carat %>
+  <dt>Comment</dt>
+  <dd><%= offer.comment %></dd>
 <% end %>

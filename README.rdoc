@@ -1,28 +1,30 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hi Raghu,
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+For the purposes of viewing the app you can log with the following information:
+  Email: user@user.com
+  Password: 99999999
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+USER STORIES
+  1) User
+    - Create Request For Proposal (RFP)
+
+  2) Merchant
+    - Bid on RFPs of interest to them (i.e. make an "Offer")
+
+  3) User
+    - Can view original RFP and any Offers made
+
+
+Other Notse
+- The home page is set to the "new" Rfp page for the specific user
+- A user can see his bid and the offers proposed on their "show" page
+- A merchant can see rfps matched to him as well as the offers made on his/her show page
+- The Match table is the many-to-many table and it is designed to help facilitate the next iteration of the app which would automatically match an Rfp with a Merchant based on geographic distances between the two.
+
+
+* I will bring a hard copy of my mockups and table layouts (one-to-many & many-to-many) to our final class as indicated in the "Final project and Presentation notes" post on Discourse.
+
+
